@@ -1,689 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <style>
+      /* Custom CSS untuk ukuran dan gambar latar belakang */
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: url("image/gambar_masjid.jpg") no-repeat center center fixed;
+        background-size: cover;
+      }
+    </style>
+    <style>
+      /* Custom CSS untuk footer */
+      footer {
+        background-color: #f8f9fa79;
+        padding: 20px 0;
+      }
+    </style>
+    <style>
+      .carousel {
+        height: 100%;
+      }
+
+      .carousel-item {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .carousel-inner {
+        height: 100%;
+      }
+
+      .carousel-item img {
+        visibility: hidden;
+        max-height: 100%;
+        width: auto;
+        margin: auto;
+        display: block;
+      }
+      .centered-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
-  <body class="">
-    <header class="">
-      <div class="shadow-lg">
+  <body>
+    <div
+      id="carouselExample"
+      class="carousel slide shadow"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
         <div
-          class="offcanvas offcanvas-start"
-          data-bs-scroll="true"
-          data-bs-backdrop="false"
-          tabindex="-1"
-          id="offcanvasScrolling"
-          aria-labelledby="offcanvasScrollingLabel"
+          class="carousel-item active"
+          style="background-image: url('image/gambar_masjid.jpg')"
         >
-          <div class="offcanvas-header">
-            <a class="navbar-brand" href="#">
-              <img
-                src="https://pesantrengirikesumo.com/giri.png"
-                alt="Logo"
-                width="30"
-                height="24"
-                class="d-inline-block align-text-top"
-              />
-              Pesantren Girikesumo
-            </a>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body shadow-lg">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Beranda</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Pendidikan
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#">Sekolah Islam Salaf</a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">SD Ky Ageng Giri</a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">SMP Ky Ageng Giri</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">SMA Ky Ageng Giri</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">SMK Ky Ageng Giri</a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">PKBM Masyarakat</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Kuliah Kelas Pesantren</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
+          <img
+            src="image/gambar_masjid.jpg"
+            alt="Gambar 1"
+            class="d-block w-100"
+          />
         </div>
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img
-                src="https://pesantrengirikesumo.com/giri.png"
-                alt="Logo"
-                width="35"
-                class="d-inline-block align-text-center"
-              />
-              Pesantren Girikesumo
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasScrolling"
-              aria-controls="offcanvasScrolling"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Beranda</a
-                  >
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Pendaftaran
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >Informasi Pendaftaran</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Ruang Pendaftaran</a>
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Pendidikan
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#">Sekolah Islam Salaf</a>
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#">SD Ky Ageng Giri</a>
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item" href="#">SMP Ky Ageng Giri</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">SMA Ky Ageng Giri</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">SMK Ky Ageng Giri</a>
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#">PKBM Masyarakat</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >Kuliah Kelas Pesantren</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
-          </div>
-        </nav>
+        <div
+          class="carousel-item"
+          style="background-image: url('image/gambar_masjid.jpg')"
+        >
+          <img
+            src="image/gambar_masjid.jpg"
+            alt="Gambar 1"
+            class="d-block w-100"
+          />
+        </div>
+        <div
+          class="carousel-item"
+          style="background-image: url('image/gambar_masjid.jpg')"
+        >
+          <img
+            src="image/gambar_masjid.jpg"
+            alt="Gambar 1"
+            class="d-block w-100"
+          />
+        </div>
       </div>
+    </div>
+    <header>
+      <nav class="mt-5">
+        <div class="container">
+          <h4 class="text-center fw-bold">MEDIA PELAYANAN</h4>
+          <h2 class="text-center fw-bold" style="color: rgb(30, 93, 210)">
+            PESANTREN GIRIKESUMO
+          </h2>
+        </div>
+      </nav>
     </header>
-
-    <main style="margin-top: 77px">
-      <div class="container mb-5">
-        <div>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <!-- <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li> -->
-          </ol>
-        </div>
-        <div class="row gx-3">
-          <div class="col col-md-8 mb-4">
-            <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="http://smkkyagenggiri.sch.id/assets/images/slide/1610787533604315.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="http://smkkyagenggiri.sch.id/assets/images/slide/1610787533604315.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExample"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExample"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="">
-              <div class="card mb-3" style="max-width: 540px">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                      class="img-thumbnail rounded"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <div class="card mb-3" style="max-width: 540px">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <div class="card mb-3" style="max-width: 540px">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <div class="card mb-3" style="max-width: 540px">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text
-                      </p>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >Last updated 3 mins ago</small
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="my-4">
-          <div class="text-center fw-bold">RILIS BERITA</div>
-          <hr class="divider" />
-        </div>
-
+    <section class="my-5 mx-2">
+      <div class="container">
         <div class="row justify-content-center">
-          <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="card mb-3">
-              <img
-                src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 100%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <p class="card-text">
-                  <small class="text-body-secondary"
-                    >Last updated 3 mins ago</small
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="card mb-3">
-              <img
-                src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 100%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <p class="card-text">
-                  <small class="text-body-secondary"
-                    >Last updated 3 mins ago</small
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="card mb-3">
-              <img
-                src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 100%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <p class="card-text">
-                  <small class="text-body-secondary"
-                    >Last updated 3 mins ago</small
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="card mb-3">
-              <img
-                src="http://smkkyagenggiri.sch.id/assets/images/berita/1648629490468751.jpg"
-                class="card-img-top"
-                alt="..."
-                style="width: 100%; height: 100%"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <p class="card-text">
-                  <small class="text-body-secondary"
-                    >Last updated 3 mins ago</small
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-end">
-            <div class="col-16">
-              <a class="icon-link icon-link-hover" href="#">
-                Lihat Selanjutnya
-                <svg class="bi" aria-hidden="true">
-                  <use xlink:href="#arrow-right"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="my-4">
-          <div class="text-center fw-bold">AGENDA</div>
-          <hr class="divider" />
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                  >
-                    <div class="col-5">10 Juli 2023 <span>|</span></div>
-
-                    <div class="col-5">Peresmian Sarjana</div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the <code>.accordion-flush</code> class. This is
-                    the first item's accordion body.
-                  </div>
+          <div class="col-lg-10 mx-2">
+            <a class="text-decoration-none m-1" href="">
+              <div
+                class="d-flex justify-content-between p-3 rounded shadow-lg text-light"
+                style="background-color: rgba(103, 150, 50, 0.884)"
+              >
+                <img src="" alt="logo-pesantren" />
+                <div>
+                  <h4>MASUK AKUN</h4>
+                  <span class="float-end">WALI SANTRI</span>
                 </div>
               </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo"
-                  >
-                    <div class="col-5">10 Juli 2023 <span>|</span></div>
-
-                    <div class="col-5">Peresmian Sarjana</div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseTwo"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the <code>.accordion-flush</code> class. This is
-                    the second item's accordion body. Let's imagine this being
-                    filled with some actual content.
-                  </div>
+            </a>
+            <a class="text-decoration-none m-1" href="">
+              <div
+                class="d-flex justify-content-between p-3 rounded shadow-lg text-light"
+                style="background-color: rgba(70, 73, 55, 0.884)"
+              >
+                <img src="" alt="logo-pesantren" />
+                <div>
+                  <h4>PENDAFTARAN</h4>
+                  <span class="float-end">SANTRI / SISWA BARU</span>
                 </div>
               </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseThree"
-                  >
-                    <div class="col-5">10 Juli 2023 <span>|</span></div>
-
-                    <div class="col-5">Peresmian Sarjana</div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseThree"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the <code>.accordion-flush</code> class. This is
-                    the third item's accordion body. Nothing more exciting
-                    happening here in terms of content, but just filling up the
-                    space to make it look, at least at first glance, a bit more
-                    representative of how this would look in a real-world
-                    application.
-                  </div>
+            </a>
+            <a class="text-decoration-none m-1" href="">
+              <div
+                class="d-flex justify-content-between p-3 rounded shadow-lg text-light"
+                style="background-color: rgba(233, 54, 54, 0.884)"
+              >
+                <img src="" alt="logo-pesantren" />
+                <div>
+                  <h4>MEDIA CENTER</h4>
+                  <span class="float-end">PESANTREN</span>
                 </div>
               </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse4"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse4"
-                  >
-                    <div class="col-5">10 Juli 2023 <span>|</span></div>
-
-                    <div class="col-5">Peresmian Sarjana</div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse4"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the <code>.accordion-flush</code> class. This is
-                    the third item's accordion body. Nothing more exciting
-                    happening here in terms of content, but just filling up the
-                    space to make it look, at least at first glance, a bit more
-                    representative of how this would look in a real-world
-                    application.
-                  </div>
+            </a>
+            <a class="text-decoration-none m-1" href="">
+              <div
+                class="d-flex justify-content-between p-3 rounded shadow-lg text-light"
+                style="background-color: rgba(156, 135, 18, 0.87)"
+              >
+                <img src="" alt="logo-pesantren" />
+                <div>
+                  <h4>BELAJAR</h4>
+                  <span class="float-end">KITAB KUNING</span>
                 </div>
               </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse5"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse5"
-                  >
-                    <div class="col-5">10 Juli 2023 <span>|</span></div>
-
-                    <div class="col-5">Peresmian Sarjana</div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse5"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the <code>.accordion-flush</code> class. This is
-                    the third item's accordion body. Nothing more exciting
-                    happening here in terms of content, but just filling up the
-                    space to make it look, at least at first glance, a bit more
-                    representative of how this would look in a real-world
-                    application.
-                  </div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse6"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse6"
-                  >
-                    <div class="col-5">10 Juli 2023 <span>|</span></div>
-
-                    <div class="col-5">Peresmian Sarjana</div>
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse6"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    Placeholder content for this accordion, which is intended to
-                    demonstrate the <code>.accordion-flush</code> class. This is
-                    the third item's accordion body. Nothing more exciting
-                    happening here in terms of content, but just filling up the
-                    space to make it look, at least at first glance, a bit more
-                    representative of how this would look in a real-world
-                    application.
-                  </div>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
-    </main>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p>MEDIA CENTER GIRIKESUMO &copy; 2023.</p>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
